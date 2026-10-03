@@ -1,4 +1,6 @@
 totalDespesa = 0
+saldo = 0
+orcamento = 0
 
 while True:
     print("==================")
@@ -20,6 +22,21 @@ while True:
             nomeDespesa = input("Digite o nome da despesa: ")
             valorDespesa = float(input("Digite o valor da despesa: "))
             saldo = saldo - valorDespesa
+
+        case 3:
+            print("Saldo atual: ", saldo)
+            if valorDespesa > valorOrcamento:
+                diferencaDespesaOrcamento = valorDespesa - valorOrcamento 
+                print("Você está a",diferencaDespesaOrcamento,"R$ acima do seu orçamento")
+
+            elif valorDespesa == valorOrcamento:
+                print("Você está no limite do seu orçamento")
+
+            elif valorDespesa < valorOrcamento:
+                diferencaDespesaOrcamento = valorDespesa - valorOrcamento 
+                print("Você está a",diferencaDespesaOrcamento,"R$ abaixo do seu orçamento")
+            else:
+                print("Indetermiado")
 
         case 4:
             print("A renda mensal é R$ ", saldo)
