@@ -26,14 +26,14 @@ while True:
         case 3:
             print("Saldo atual: ", saldo)
             if valorDespesa > valorOrcamento:
-                diferencaDespesaOrcamento = valorOrcamento - valorDespesa
+                diferencaDespesaOrcamento = valorDespesa - valorOrcamento 
                 print("Você está a",diferencaDespesaOrcamento,"R$ acima do seu orçamento")
 
             elif valorDespesa == valorOrcamento:
                 print("Você está no limite do seu orçamento")
 
             elif valorDespesa < valorOrcamento:
-                diferencaDespesaOrcamento = valorDespesa - valorOrcamento 
+                diferencaDespesaOrcamento = valorOrcamento - valorDespesa
                 print("Você está a",diferencaDespesaOrcamento,"R$ abaixo do seu orçamento")
             else:
                 print("Indetermiado")
