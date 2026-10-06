@@ -1,7 +1,6 @@
 totalDespesa = 0
 descricaoDespesa = []
 quantidadeDespesa = 0
-saldo = 0
 
 rendaMensal = float(input("Digite sua renda: R$"))
 saldo = rendaMensal
