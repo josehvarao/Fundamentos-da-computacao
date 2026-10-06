@@ -6,9 +6,9 @@ saldo = 0
 rendaMensal = float(input("Digite sua renda: R$"))
 saldo = rendaMensal
 orcamento = float(input("Digite o seu orçamento: R$"))
-    
 
-while True:
+menu = True
+while menu:
     print("==================")
     print("1 - Despesas")
     print("2 - Orçamento")
@@ -24,36 +24,35 @@ while True:
             valorDespesa = float(input("Digite o valor da despesa: R$"))
             saldo = saldo - valorDespesa
             
-            descricaoDespesa.append(nomeDespesa)
+            descricaoDespesa.append((nomeDespesa, valorDespesa))
             totalDespesa += valorDespesa
             quantidadeDespesa += 1
 
         case 2:
-            print("Saldo atual: ", saldo)
-            if orcamento:
-               print(orcamento) 
+            print("Saldo atual: R$", saldo)
+            print("Orçamento: R$", orcamento)
 
-            elif valorDespesa > orcamento:
-                diferencaDespesaOrcamento = orcamento - valorDespesa 
-                print("Você está a",diferencaDespesaOrcamento,"R$ acima do seu orçamento")
+            if totalDespesa > orcamento:
+                excedente = totalDespesa - orcamento   
+                print("Fora do orçamento! Você está a R$",excedente," acima do seu orçamento")
 
-            elif valorDespesa == valorOrcamento:
+            elif totalDespesa == orcamento:
                 print("Você está no limite do seu orçamento")
 
-            elif valorDespesa < valorOrcamento:
-                diferencaDespesaOrcamento = orcamento - valorDespesa
-                print("Você está a",diferencaDespesaOrcamento,"R$ abaixo do seu orçamento")
+            elif totalDespesa < orcamento:
+                diferencaDespesaOrcamento = orcamento - totalDespesa
+                print("Dentro do orçamento! Você está a R$",diferencaDespesaOrcamento," abaixo do seu orçamento")
             else:
                 print("Indetermiado")
 
         case 3:
             print("==================")
-            print("A renda mensal é R$ ",rendaMensal)
+            print("A renda mensal é R$",rendaMensal)
             print("O seu orçamento é de: R$",orcamento)
             print("O total de despesas registradas é de: R$",totalDespesa)
             print("Quantidade de despesas: ",quantidadeDespesa)
-            for indice, item in enumerate(descricaoDespesa):
-                print(indice, "-", item,)
+            for indice, (item, valor) in enumerate(descricaoDespesa):
+                print(indice, "-", item, ": R$", valor)
             print("==================")
             
             input("Digite qualquer tecla para voltar")
