@@ -27,10 +27,10 @@ while menu:
              totalDespesa += valorDespesa
              quantidadeDespesa += 1
              continuar = str(input('Deseja continuar? Digite qualquer tecla. Deseja encerrar? Digite (1):'))
-              if continuar == '1':
+             if continuar == '1':
                 break
-              else:
-                  print('Continuando...')
+             else:
+                print('Continuando...')
 
         case 2:
             print("Saldo atual: R$", saldo)
