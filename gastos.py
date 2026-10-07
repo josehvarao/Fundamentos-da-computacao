@@ -18,14 +18,15 @@ while menu:
     opcao = int(input("Digite uma opção(1-4): "))
     match opcao:
         case 1:
-            while True
-            nomeDespesa = str(input("Digite o nome da despesa: "))
-            valorDespesa = float(input("Digite o valor da despesa: R$"))
-            saldo = saldo - valorDespesa
+            while True:
+             nomeDespesa = str(input("Digite o nome da despesa: "))
+             valorDespesa = float(input("Digite o valor da despesa: R$"))
+             saldo = saldo - valorDespesa
             
-            descricaoDespesa.append((nomeDespesa, valorDespesa))
-            totalDespesa += valorDespesa
-            quantidadeDespesa += 1
+             descricaoDespesa.append((nomeDespesa, valorDespesa))
+             totalDespesa += valorDespesa
+             quantidadeDespesa += 1
+              break
 
         case 2:
             print("Saldo atual: R$", saldo)
