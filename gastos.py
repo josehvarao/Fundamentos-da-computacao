@@ -16,9 +16,9 @@ while menu:
     print("==================")
 
     opcao = int(input("Digite uma opção(1-4): "))
- while True
     match opcao:
         case 1:
+            while True
             nomeDespesa = str(input("Digite o nome da despesa: "))
             valorDespesa = float(input("Digite o valor da despesa: R$"))
             saldo = saldo - valorDespesa
