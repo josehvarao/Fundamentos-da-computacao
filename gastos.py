@@ -16,7 +16,7 @@ while menu:
     print("==================")
 
     opcao = int(input("Digite uma opção(1-4): "))
-
+ while True
     match opcao:
         case 1:
             nomeDespesa = str(input("Digite o nome da despesa: "))
