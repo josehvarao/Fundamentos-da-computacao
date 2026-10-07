@@ -21,12 +21,16 @@ while menu:
             while True:
              nomeDespesa = str(input("Digite o nome da despesa: "))
              valorDespesa = float(input("Digite o valor da despesa: R$"))
+             
              saldo = saldo - valorDespesa
-            
              descricaoDespesa.append((nomeDespesa, valorDespesa))
              totalDespesa += valorDespesa
              quantidadeDespesa += 1
-             break
+             continuar = str(input('Deseja continuar? Digite qualquer tecla. Deseja encerrar? Digite (1):'))
+              if continuar == '1':
+                break
+              else:
+                  print('Continuando...')
 
         case 2:
             print("Saldo atual: R$", saldo)
