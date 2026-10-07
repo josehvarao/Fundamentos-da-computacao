@@ -26,7 +26,7 @@ while menu:
              descricaoDespesa.append((nomeDespesa, valorDespesa))
              totalDespesa += valorDespesa
              quantidadeDespesa += 1
-              break
+             break
 
         case 2:
             print("Saldo atual: R$", saldo)
